@@ -15,8 +15,7 @@ Positionals:
 
 Options:
       --version   Show version number                                  [boolean]
-  -i, --instance  instance of shortie.sh to use
-                                        [string] [default: "https://shortie.sh"]
+  -i, --instance  instance of shortie.sh to use                         [string] [default: "https://shortie.sh"]
       --help      Show help                                            [boolean]
   -e, --ending    custom ending for redirect                            [string]
 ```
