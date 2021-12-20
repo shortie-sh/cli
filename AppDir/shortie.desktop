@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=shortie
+Comment=CLI shortie
+Exec=shortie %F
+Icon=shortie
+Categories=Utility
+Terminal=true
