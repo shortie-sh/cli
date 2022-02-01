@@ -64,14 +64,14 @@ func Execute(defCmd string) {
 
 func init() {
 	cobra.OnInitialize(initInstance)
-	rootCmd.PersistentFlags().StringVar(&instance, "instance", "https://server.shortie.sh", "shortie-server instance")
+	rootCmd.PersistentFlags().StringVar(&instance, "instance", "https://www.shortie.sh", "shortie-server instance")
 
 }
 
 func initInstance() {
 	viper.BindEnv("instance", "SHORTIE_INSTANCE")
-	viper.SetDefault("instance", "https://server.shortie.sh")
-	if instance != "" && instance != "https://server.shortie.sh"  {
+	viper.SetDefault("instance", "https://www.shortie.sh")
+	if instance != "" && instance != "https://www.shortie.sh"  {
 		viper.Set("instance", instance)
 	}
 	viper.SetEnvPrefix("shortie")
