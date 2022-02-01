@@ -1,0 +1,5 @@
+query getRedirect($ending: String!){
+    getRedirect(ending: $ending) {
+        url
+    }
+}

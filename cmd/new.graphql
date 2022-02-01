@@ -1,0 +1,13 @@
+mutation createRedirect($url: String!, $ending: String) {
+    createRedirect(url: $url, ending: $ending) {
+        url,
+        ending
+    }
+}
+
+mutation createRedirectGenEnding($url: String!) {
+    createRedirect(url: $url) {
+        url,
+        ending
+    }
+}
