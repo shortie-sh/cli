@@ -19,6 +19,5 @@ package main
 import "shortie-sh/cli/cmd"
 
 func main() {
-	defCmd:="new"
-  	cmd.Execute(defCmd)
+  	cmd.Execute()
 }

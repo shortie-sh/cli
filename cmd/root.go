@@ -40,27 +40,12 @@ var rootCmd = &cobra.Command{
 
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
-func Execute(defCmd string) {
-	var cmdFound bool
-	cmd :=rootCmd.Commands()
-  
-	for _,a:=range cmd{
-	  for _,b:=range os.Args[1:] {
-		if a.Name()==b {
-		 cmdFound=true
-		  break
-		}
-	  }
-	}
-	if !cmdFound {
-	  args:=append([]string{defCmd}, os.Args[1:]...)
-	  rootCmd.SetArgs(args)
-	}
+func Execute() {
 	if err := rootCmd.Execute(); err != nil {
 	  fmt.Println(err)
 	  os.Exit(1)
 	}
-  }
+}
 
 func init() {
 	cobra.OnInitialize(initInstance)
